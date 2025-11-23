@@ -116,5 +116,3 @@ Proper project and code organization
 If you face any issues:
 
 Ask during class/lab time
-
-```bash
