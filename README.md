@@ -25,9 +25,9 @@ You will:
 Each student must create and use **only one personal branch** using the following format:
 
 ✅ **Examples:**
-- `rosan-16`
-- `sabina-21`
-- `nirajan-08`
+- `rosan`
+- `sabina`
+- `nirajan`
 
 > You will use the same branch for all assignments, labs, and projects throughout the course.
 
