@@ -36,14 +36,18 @@ Each student must create and use **only one personal branch** using the followin
 ## 🪜 Steps to Follow
 
 ### 1. Fork and Clone the Repository
+```
 git clone https://github.com/epiyushpant/MRC2025OOP.git
+```
 
 ### 2. Create Your Branch (if not already created)
 
+```
 git checkout -b yourname
 # Example:
 git checkout -b sabina
 
+```
 ### 3. Work on Your Task
 Organize your work inside your personal folder. Suggested structure:
 
@@ -51,7 +55,8 @@ Organize your work inside your personal folder. Suggested structure:
     ├── assignment1/
     ├── lab2/
     └── project/
-    
+
+
 ### 4. Get Latest Changes from `main` Branch
 
 ```bash
@@ -62,12 +67,28 @@ git merge main
 :wq   # (If a merge editor opens, this saves and quits) 
 ```
 
-5. Stage, Commit, and Push
+
+5. First Time Push COnfiguration 
 ```bash
-git add .  
-git commit -m "Completed assignment 1"  
-git push origin yourname-rollnumber
+git checkout -b yourbranchname
+git config --global user.email "your email"
+git config --global user.name "your name"
+git status
+git add -A
+git commit -m "commit message"
+git push --set upstream origin yourbranchname
+
 ```
+6. From second time : Stage, Commit, and Push
+```bash
+git add -A  
+git commit -m "Completed assignment 1"  
+git push 
+```
+
+
+<img width="1458" height="1966" alt="image" src="https://github.com/user-attachments/assets/03578103-dc94-433b-a0a4-c1340e250838" />
+
 
 📌 Guidelines
 ❌ Do not commit to main
