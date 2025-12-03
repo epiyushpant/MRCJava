@@ -26,8 +26,8 @@ public class PrimitiveTypeCasting {
         double largeDouble = 123.456;
         int castToInt = (int) largeDouble; // double to int (truncates decimal)
 
-       // long largeLong = 9876543210L;
-        long largeLong = 123456;
+        long largeLong = 9876543210L;  //2,147,483,647
+        //long largeLong = 123456;
         int castFromLong = (int) largeLong; // long to int (potential data loss if value exceeds int range)
 
         float largeFloat = 3.14159f;
