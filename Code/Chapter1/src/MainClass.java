@@ -1,7 +1,7 @@
 public class MainClass {
     public static void main(String[] args) {
-        PrimitiveTypeCasting obj = new PrimitiveTypeCasting();
-        obj.demoCasting();
+//        PrimitiveTypeCasting obj = new PrimitiveTypeCasting();
+//        obj.demoCasting();
 
 
 //   PreIncrementDemo.demonstratePreIncrement();
@@ -12,7 +12,22 @@ public class MainClass {
 //
 //
 //        LearnLiterals.GetLiterals();
+
+
+//        System.out.println(args[0]);
+//        System.out.println(args[1]);
+       // Assignments.runAssignments();
+
+       // StringManipulationDemo.DemoStringManipulation();
+        //StringManipulationDemo.DemoStringManipulation();
+       // StringManipulationDemo.comparePerformance();
+        VariableArgs.CallVarArgs();
+
+        String ch= "name";
+        System.out.println((ch.length()));
     }
+
+
 }
 
 
