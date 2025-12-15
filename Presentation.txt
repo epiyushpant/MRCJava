@@ -1,0 +1,20 @@
+Make Presentation for the following topics and present in class on Monday and Tuesday  (15 and 16 december 2025 ) 
+
+You should explain theory concepts with code examples and relevant demo. 
+
+Date : 15 December 
+1.   Class and object .                                                                           : JAGDISH RAM BHATTA 
+2.   Constructors  and use of constructor in java.                              :  KRISHNA BAHADUR BAN GOSHAI
+3.  Type of constructor in java with examples and use case.             :  NABA RAJ KARKI
+4.   Garbage collection in java                                                              :  PRADIP SHRESTHA 
+5.   Static vs instance method in java                                                  :  RAJIN CHYAME
+6.   Method overloading in java                                                            : RAMU KARKI
+
+Date : 16 December
+7.   Method overriding in java                                                               : SAGAR THAPA MAGAR
+8.  Inheritance and type of inheritance in java                                     : SAROJ BHATTARAI
+9.  Abstract classes in java                                                                    : SABIN DURA
+10.   Access Specifiers in java                                                                : SUSAN ADHIKARI
+11.  Interfaces in java                                                                             : TULSI BHATTA
+
+

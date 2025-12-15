@@ -1,0 +1,5 @@
+1.   Differentiate .net framework and .net core . List any 4 project types in c# and explain  what  kind of application we can build from each. 
+2.   What is method overriding , explain it with suitable code example . 
+3.  Write a program in c# to print whether entered number is prime or not . 
+4.  Explain MVC architecture in c# with clear diagram . 
+5.  What is ADO.NET ? write a code function  to insert data to employee table using ADO.NET 

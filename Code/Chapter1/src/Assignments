@@ -1,0 +1,120 @@
+// java
+public class AssignmentSolutions {
+
+    // 1. Swap using a third variable
+    public static int[] swapUsingTemp(int a, int b) {
+        int temp = a;
+        a = b;
+        b = temp;
+        return new int[]{a, b};
+    }
+
+    // 2. Swap without using a third variable (using XOR)
+    public static int[] swapWithoutTemp(int a, int b) {
+        if (a != b) {
+            a = a ^ b;
+            b = a ^ b;
+            a = a ^ b;
+        }
+        return new int[]{a, b};
+    }
+
+    // 3. Count number of even and odd elements in an array
+    public static int[] countEvenOdd(int[] arr) {
+        int even = 0, odd = 0;
+        for (int v : arr) {
+            if (v % 2 == 0) even++; else odd++;
+        }
+        return new int[]{even, odd};
+    }
+
+    // 4. Check if a number is prime
+    public static boolean isPrime(int n) {
+        if (n <= 1) return false;
+        if (n <= 3) return true;
+        if (n % 2 == 0) return false;
+        for (int i = 3; i * i <= n; i += 2) {
+            if (n % i == 0) return false;
+        }
+        return true;
+    }
+
+    // 5. Reverse a number
+    public static int reverseNumber(int n) {
+        int sign = n < 0 ? -1 : 1;
+        n = Math.abs(n);
+        int rev = 0;
+        while (n > 0) {
+            rev = rev * 10 + n % 10;
+            n /= 10;
+        }
+        return rev * sign;
+    }
+
+    // 6. Reverse a string
+    public static String reverseString(String s) {
+        return new StringBuilder(s).reverse().toString();
+    }
+
+    // 7. Convert Celsius to Fahrenheit
+    public static double celsiusToFahrenheit(double celsius) {
+        return celsius * 9.0 / 5.0 + 32.0;
+    }
+
+    // 8. Sum and average of an array
+    public static long sumOfArray(int[] arr) {
+        long sum = 0;
+        for (int v : arr) sum += v;
+        return sum;
+    }
+    public static double averageOfArray(int[] arr) {
+        return arr.length == 0 ? 0.0 : (double) sumOfArray(arr) / arr.length;
+    }
+
+    // 9. Check if a value is present in an array
+    public static boolean contains(int[] arr, int value) {
+        for (int v : arr) if (v == value) return true;
+        return false;
+    }
+
+    // 10. Check palindrome number
+    public static boolean isPalindromeNumber(int n) {
+        if (n < 0) return false;
+        return n == reverseNumber(n);
+    }
+
+    // Demonstration
+    public static void main(String[] args) {
+        int a = 10, b = 20;
+        int[] swapped1 = swapUsingTemp(a, b);
+        System.out.println("Swap using temp: a=" + swapped1[0] + ", b=" + swapped1[1]);
+
+        int[] swapped2 = swapWithoutTemp(a, b);
+        System.out.println("Swap without temp: a=" + swapped2[0] + ", b=" + swapped2[1]);
+
+        int[] arr = {1, 2, 3, 4, 5, 6};
+        int[] counts = countEvenOdd(arr);
+        System.out.println("Even count=" + counts[0] + ", Odd count=" + counts[1]);
+
+        int primeTest = 17;
+        System.out.println(primeTest + " is prime? " + isPrime(primeTest));
+
+        int number = 12345;
+        System.out.println("Reverse of " + number + " = " + reverseNumber(number));
+
+        String s = "hello";
+        System.out.println("Reverse of \"" + s + "\" = \"" + reverseString(s) + "\"");
+
+        double c = 37.0;A
+        System.out.println(c + " C = " + celsiusToFahrenheit(c) + " F");
+
+        System.out.println("Sum = " + sumOfArray(arr) + ", Average = " + averageOfArray(arr));
+
+        int checkVal = 3;
+        System.out.println("Array contains " + checkVal + "? " + contains(arr, checkVal));
+
+        int pal1 = 121, pal2 = 123;
+        System.out.println(pal1 + " is palindrome? " + isPalindromeNumber(pal1));
+        System.out.println(pal2 + " is palindrome? " + isPalindromeNumber(pal2));
+    }
+}
