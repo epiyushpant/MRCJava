@@ -15,22 +15,22 @@
 //    }
 //}
 
-//class Student{
-//    String name;
-//    int age;
-//
-//    Student(String name, int age){
-//        this.name = "John";
-//        this.age = 30;
-//        System.out.println("Parameterized Constructor: ");
-//            }
-//}
-//public class main {
-//    public static void main(String[] args){
-//        Student s1 = new Student("Alice", 20);
-//        System.out.println("Name: " + s1.name+ ", Age: "+s1.age);
-//    }
-//}
+class Student{
+    String name;
+    int age;
+
+    Student(String name, int age){
+        this.name = "John";
+        this.age = 30;
+        System.out.println("Parameterized Constructor: ");
+            }
+}
+public class main {
+    public static void main(String[] args){
+        Student s1 = new Student("Alice", 20);
+        System.out.println("Name: " + s1.name+ ", Age: "+s1.age);
+    }
+}
 
 //class Student{
 //    String name;
