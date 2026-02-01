@@ -1,0 +1,17 @@
+1. Static Attributes and Methods
+Static attributes and methods belong to the class itself, not to individual objects.
+They are shared among all objects created from the class.
+Only one copy exists in memory.
+Can be accessed using the class name.
+Static methods can access only static attributes directly.
+Use case:
+When data or behavior is common for all objects of the class.
+
+2. Instance Attributes and Methods
+Instance attributes and methods belong to individual objects of a class.
+Each object has its own separate copy.
+Created when an object is instantiated.
+Accessed using an object reference.
+Instance methods can access both instance and static attributes.
+Use case:
+When data or behavior should be unique for each object.
