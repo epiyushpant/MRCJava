@@ -8,6 +8,7 @@ public class ExHandling  {
            System.out.println(ex);    
            //makes easy to debug in application . 
        }
+
        /* This code is blocked if exception handling is not used */
        System.out.println("Hello World 2!");
        System.out.println("Hello World 3!");
