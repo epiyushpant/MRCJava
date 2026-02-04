@@ -1,9 +1,0 @@
-Class Test  : 
-
-Do any 4 questions 
-1.  Write a program to check whether a entered number  is prime or not in java . 
-2.  Write a program to input  number from user and  and reverse a number (eg: 123 ) in java . 
-3.   Write a program to  calculate area of circle , rectangle ,  square using method overloading in java . 
-
-4. Difference between method overloading and method overriding in java . 
-5.  What in encapsulation in java ? How can we achieve encapsultion in java ? 
