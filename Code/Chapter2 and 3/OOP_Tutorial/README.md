@@ -8,15 +8,15 @@ A comprehensive, beginner-friendly guide to Object-Oriented Programming in Java.
 
 | # | Concept | File | Description |
 |---|---------|------|-------------|
-| 1 | **Classes & Objects** | `01_ClassesAndObjects.java` | Creating classes, objects, constructors |
-| 2 | **Encapsulation** | `02_Encapsulation.java` | Private fields, getters/setters, data hiding |
-| 3 | **Inheritance** | `03_Inheritance.java` | Single inheritance, `extends`, `super` keyword |
-| 4 | **Polymorphism** | `04_Polymorphism.java` | Method overloading & overriding |
-| 5 | **Abstraction** | `05_Abstraction.java` | Abstract classes and methods |
-| 6 | **Interfaces** | `06_Interfaces.java` | Interface implementation, multiple inheritance |
-| 7 | **Static vs Instance** | `07_StaticVsInstance.java` | Static and instance members |
-| 8 | **Diamond Problem** | `08_DiamondProblem.java` | Multiple inheritance issue & solutions |
-| 9 | **Complete Example** | `09_CompleteOOPExample.java` | Bank system using all concepts |
+| 1 | **Classes & Objects** | `ClassesAndObjectsDemo.java` | Creating classes, objects, constructors |
+| 2 | **Encapsulation** | `EncapsulationDemo.java` | Private fields, getters/setters, data hiding |
+| 3 | **Inheritance** | `InheritanceDemo.java` | Single inheritance, `extends`, `super` keyword |
+| 4 | **Polymorphism** | `PolymorphismDemo.java` | Method overloading & overriding |
+| 5 | **Abstraction** | `AbstractionDemo.java` | Abstract classes and methods |
+| 6 | **Interfaces** | `InterfacesDemo.java` | Interface implementation, multiple inheritance |
+| 7 | **Static vs Instance** | `StaticVsInstanceDemo.java` | Static and instance members |
+| 8 | **Diamond Problem** | `DiamondProblemDemo.java` | Multiple inheritance issue & solutions |
+| 9 | **Complete Example** | `CompleteOOPDemo.java` | Bank system using all concepts |
 
 ---
 
@@ -40,7 +40,7 @@ A comprehensive, beginner-friendly guide to Object-Oriented Programming in Java.
 
 ### Compile and Run a Single File:
 ```bash
-javac 01_ClassesAndObjects.java
+javac ClassesAndObjectsDemo.java
 java ClassesAndObjectsDemo
 ```
 
