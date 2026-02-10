@@ -11,7 +11,8 @@ public class BankAccount {
 
     // Method that declares a checked exception
     static void withdraw(double balance, double amount)
-            throws InsufficientBalanceException {
+            throws InsufficientBalanceException {  // declares that this method may throw InsufficientBalanceException
+                //IF WE DONT USE THROWS KEYWORD THEN WE HAVE TO HANDLE THE EXCEPTION IN THIS METHOD USING TRY-CATCH BLOCK
 
         if (amount > balance) {
             throw new InsufficientBalanceException(

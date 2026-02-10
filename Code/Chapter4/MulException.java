@@ -1,3 +1,7 @@
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
 public class MulException {  
     public static void main(String[] args) {  
         try {  
@@ -5,17 +9,17 @@ public class MulException {
             int[] numbers = {1, 2, 3};  
              System.out.println(numbers[2]); // May throw ArrayIndexOutOfBoundsException  
   
-            // String str = "abc";  
-            // int num = Integer.parseInt(str); // May throw NumberFormatException  
+            String str = "abc";  
+            int num = Integer.parseInt(str); // May throw NumberFormatException  
   
-            // FileReader file = new FileReader("test.txt"); // May throw FileNotFoundException  
+            FileReader file = new FileReader("test.txt"); // May throw FileNotFoundException  
   
-        // } catch (ArrayIndexOutOfBoundsException e) {  
-        //     System.out.println("Error: Array index is out of bounds.");  
-        // } catch (NumberFormatException e) {  
-        //     System.out.println("Error: Invalid number format.");  
-        // } catch (FileNotFoundException e) {  
-        //     System.out.println("Error: File not found.");  
+        } catch (ArrayIndexOutOfBoundsException e) {  
+            System.out.println("Error: Array index is out of bounds.");  
+        } catch (NumberFormatException e) {  
+            System.out.println("Error: Invalid number format.");  
+        } catch (FileNotFoundException e) {  
+            System.out.println("Error: File not found.");  
         } catch (Exception e) {  
             System.out.println("Error: An unexpected exception occurred.");  
         }  
