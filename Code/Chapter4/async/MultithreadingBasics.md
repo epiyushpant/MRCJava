@@ -71,9 +71,21 @@ public class Main {
 }
 ```
 
-**Why is `Runnable` better?**
-*   Java doesn't support multiple inheritance. If you extend `Thread`, you can't extend any other class.
-*   Implementing `Runnable` allows your class to extend another class if needed.
+### 3. Which one should you use? (Important!)
+
+**✅ Implementing `Runnable` is preferred over extending `Thread`.**
+
+Here is why:
+
+| Feature | `implements Runnable` (Best) | `extends Thread` (Avoid) |
+| :--- | :--- | :--- |
+| **Inheritance** | **Flexible:** You can extend another class (e.g., `class Player extends GamePerson implements Runnable`). | **Restricted:** Java only allows extending ONE class. You cannot extend anything else! |
+| **Reusability** | **High:** The same task (runnable) can be passed to multiple threads. | **Low:** Each thread is a unique object. |
+| **Resources** | **Lightweight:** Runnable is just a task. | **Heavy:** Thread objects require more memory. |
+
+**Rule of Thumb:**
+*   Use `Runnable` for defining the **task** (what to do).
+*   Use `Thread` only to **run** the task.
 
 ---
 
@@ -248,3 +260,45 @@ public class RunnableInterfaceDemo {
 ```
 
 
+
+### Example C: Why Runnable is Preferred? (Inheritance)
+
+If you extend `Thread`, you **cannot** extend any other class because Java only supports single inheritance.
+However, with `Runnable`, your class can extend another parent class **AND** behave like a thread.
+
+Save as `RunnableInheritanceDemo.java`:
+
+```java
+/**
+ * RunnableInheritanceDemo.java
+ * Demonstrates: Extending a parent class AND implementing Runnable
+ */
+
+// 1. A normal parent class
+class GameCharacter {
+    public void jump() {
+        System.out.println("🏃 Character jumps!");
+    }
+}
+
+// 2. We extend GameCharacter, but can STILL run as a thread!
+class Player extends GameCharacter implements Runnable {
+    @Override
+    public void run() {
+        System.out.println("... Background task running ...");
+    }
+}
+
+public class RunnableInheritanceDemo {
+    public static void main(String[] args) {
+        Player p1 = new Player();
+        
+        // Use inherited method (normal OOP)
+        p1.jump(); 
+        
+        // Run as a thread
+        Thread t = new Thread(p1);
+        t.start();
+    }
+}
+```
