@@ -15,33 +15,51 @@ To understand this, we first need to understand **Multitasking**. Multitasking i
 
 ### Key Terms Simplified (Beginner Friendly)
 
-<<<<<<< HEAD
-#### ✅ 1. Process (Simple Meaning)
-A **process** is a program that is running.
-*   It is stored in **main memory (RAM)**.
-*   It is an **active program**.
-*   When you restart the computer, the process disappears.
-=======
+
 ####Process:
 
-An executing instance of a program is called a process.
-Some operating systems use the term ‘task‘ to refer to a program that is being executed.
-A process is always stored in the main memory also termed as the primary memory or random access memory.
-Therefore, a process is termed as an active entity. It disappears if the machine is rebooted.
-Several process may be associated with a same program.
-On a multiprocessor system, multiple processes can be executed in parallel.
-On a uni-processor system, though true parallelism is not achieved, a process scheduling algorithm is applied and the processor is scheduled to execute each process one at a time yielding an illusion of concurrency.
-Example: Executing multiple instances of the ‘Calculator’ program. Each of the instances are termed as a process.
-Thread:
+✅ Process (Simple Meaning)
 
-A thread is a subset of the process.
-It is termed as a ‘lightweight process’, since it is similar to a real process but executes within the context of a process and shares the same resources allotted to the process by the kernel.
-Usually, a process has only one thread of control – one set of machine instructions executing at a time.
-A process may also be made up of multiple threads of execution that execute instructions concurrently.
-Multiple threads of control can exploit the true parallelism possible on multiprocessor systems.
-On a uni-processor system, a thread scheduling algorithm is applied and the processor is scheduled to run each thread one at a time.
-All the threads running within a process share the same address space, file descriptors, stack and other process related attributes.
-Since the threads of a process share the same memory, synchronizing the access to the shared data within the process gains unprecedented importance.
+A process is a program that is running.
+
+It is stored in main memory (RAM).
+
+It is an active program.
+
+When you restart the computer, the process disappears.
+
+You can run the same program many times → each running copy is a separate process.
+
+👉 Example:
+If you open Calculator 3 times, you have 3 processes.
+
+On different systems:
+
+Multi-processor system → Many processes run truly at the same time.
+
+Single processor system → CPU runs one process at a time very fast, so it looks like they are running together.
+
+✅ Thread (Simple Meaning)
+
+A thread is a small part of a process.
+
+It is called a lightweight process.
+
+A process can have one or many threads.
+
+Threads share the same memory and resources of the process.
+
+Threads help do multiple tasks inside one program at the same time.
+
+👉 Example:
+In a web browser:
+
+One thread loads the page
+
+One thread plays video
+
+One thread downloads a file
+
 
 
 | Term | Definition | Characteristics |
