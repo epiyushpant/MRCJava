@@ -13,19 +13,35 @@ To understand this, we first need to understand **Multitasking**. Multitasking i
 1.  **Process-based Multitasking (Multiprocessing)**
 2.  **Thread-based Multitasking (Multithreading)**
 
-### Key Definitions
+### Key Terms Simplified (Beginner Friendly)
 
-| Term | Definition | Characteristics |
-| :--- | :--- | :--- |
-| **Process** | A program in execution (e.g., MS Word, Music Player). | **ciHeavyweight.** Has its own separate memory space. Switching between processes is expensive. |
-| **Thread** | A sub-part of a process. The smallest unit of processing. | **Lightweight.** Shares the same memory area as the process. Switching between threads is fast. |
+#### ✅ 1. Process (Simple Meaning)
+A **process** is a program that is running.
+*   It is stored in **main memory (RAM)**.
+*   It is an **active program**.
+*   When you restart the computer, the process disappears.
 
-### Multiprocessing vs. Multithreading
+You can run the same program many times → each running copy is a separate process.
 
-*   **Multiprocessing:** Using two or more CPUs (processors) within a single computer system. Why? To increase computing power.
-    *   *Analogy:* Two different people cooking in two different kitchens.
-*   **Multithreading:** Executing multiple threads within a single process. Why? To maximize the utilization of the CPU.
-    *   *Analogy:* One person cooking multiple dishes at the same time (chopping while water boils).
+**👉 Example:**
+If you open Calculator 3 times, you have **3 processes**.
+
+*   **Multi-processor system** → Many processes run truly at the same time.
+*   **Single processor system** → CPU runs one process at a time very fast, so it looks like they are running together.
+
+#### ✅ 2. Thread (Simple Meaning)
+A **thread** is a small part of a process.
+*   It is called a **lightweight process**.
+*   A process can have one or many threads.
+*   Threads **share the same memory** and resources of the process.
+
+Threads help do multiple tasks inside **one program** at the same time.
+
+**👉 Example:**
+In a web browser:
+1.  One thread loads the page.
+2.  One thread plays video.
+3.  One thread downloads a file.
 
 > **Note:** Java provides built-in support for **Multithreading**, not Multiprocessing (which is OS-level).
 
