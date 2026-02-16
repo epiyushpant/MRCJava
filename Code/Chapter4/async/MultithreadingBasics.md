@@ -165,3 +165,83 @@ RunnableTask: 2
 WorkerThread: 3
 ...
 ```
+
+## 5. Practical Example: Downloading & Processing
+
+Here is a more realistic example.
+*   **2 Threads** simulate downloading files (Using `Thread` class).
+*   **2 Runnables** simulate processing data (Using `Runnable` interface).
+
+Save this as `PracticalMultithreading.java`.
+
+```java
+/**
+ * PracticalMultithreading.java
+ * Demonstrates a practical scenario with 4 parallel tasks:
+ * - 2 File Download tasks (Extending Thread)
+ * - 2 Data Processing tasks (Implementing Runnable)
+ */
+
+class FileDownloader extends Thread {
+    private String fileName;
+
+    public FileDownloader(String fileName) {
+        this.fileName = fileName;
+    }
+
+    @Override
+    public void run() {
+        System.out.println("⬇️ Downloading: " + fileName);
+        try {
+            for (int i = 0; i <= 100; i += 50) {
+                System.out.println("   " + fileName + ": " + i + "%");
+                Thread.sleep(500); 
+            }
+            System.out.println("✅ Completed: " + fileName);
+        } catch (InterruptedException e) {
+            System.out.println("❌ Interrupted: " + fileName);
+        }
+    }
+}
+
+class DataProcessor implements Runnable {
+    private String datasetName;
+
+    public DataProcessor(String datasetName) {
+        this.datasetName = datasetName;
+    }
+
+    @Override
+    public void run() {
+        System.out.println("⚙️ Processing: " + datasetName);
+        try {
+            Thread.sleep(1000); 
+            System.out.println("💾 Saved Report: " + datasetName);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+public class PracticalMultithreading {
+    public static void main(String[] args) {
+        System.out.println("=== Starting 4 Concurrent Tasks ===");
+
+        // Task Set 1: File Downloads (Thread Class)
+        FileDownloader d1 = new FileDownloader("Video.mp4");
+        FileDownloader d2 = new FileDownloader("Image.png");
+
+        // Task Set 2: Data Processing (Runnable Interface)
+        Thread t1 = new Thread(new DataProcessor("UserLogs.txt"));
+        Thread t2 = new Thread(new DataProcessor("SalesData.csv"));
+
+        d1.start();
+        d2.start();
+        t1.start();
+        t2.start();
+        
+        System.out.println("=== Main Thread continues... ===");
+    }
+}
+```
+
