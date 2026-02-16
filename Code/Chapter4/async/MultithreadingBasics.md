@@ -15,7 +15,7 @@ To understand this, we first need to understand **Multitasking**. Multitasking i
 
 ### Key Definitions
 
-Process:
+####Process:
 
 An executing instance of a program is called a process.
 Some operating systems use the term ‘task‘ to refer to a program that is being executed.
@@ -35,6 +35,7 @@ Multiple threads of control can exploit the true parallelism possible on multipr
 On a uni-processor system, a thread scheduling algorithm is applied and the processor is scheduled to run each thread one at a time.
 All the threads running within a process share the same address space, file descriptors, stack and other process related attributes.
 Since the threads of a process share the same memory, synchronizing the access to the shared data within the process gains unprecedented importance.
+
 
 | Term | Definition | Characteristics |
 | :--- | :--- | :--- |
