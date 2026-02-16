@@ -166,82 +166,85 @@ WorkerThread: 3
 ...
 ```
 
-## 5. Practical Example: Downloading & Processing
+## 5. Basic Templates: Separate Examples
 
-Here is a more realistic example.
-*   **2 Threads** simulate downloading files (Using `Thread` class).
-*   **2 Runnables** simulate processing data (Using `Runnable` interface).
+These are the most fundamental, standalone examples for copy-pasting.
 
-Save this as `PracticalMultithreading.java`.
+### Example A: Thread Class (Simplest)
+This creates multiple threads by extending the `Thread` class.
+
+Save as `ThreadClassDemo.java`:
 
 ```java
 /**
- * PracticalMultithreading.java
- * Demonstrates a practical scenario with 4 parallel tasks:
- * - 2 File Download tasks (Extending Thread)
- * - 2 Data Processing tasks (Implementing Runnable)
+ * ThreadClassDemo.java
+ * The most basic example of extending the Thread class.
  */
 
-class FileDownloader extends Thread {
-    private String fileName;
-
-    public FileDownloader(String fileName) {
-        this.fileName = fileName;
-    }
-
+class NumberThread extends Thread {
     @Override
     public void run() {
-        System.out.println("⬇️ Downloading: " + fileName);
-        try {
-            for (int i = 0; i <= 100; i += 50) {
-                System.out.println("   " + fileName + ": " + i + "%");
-                Thread.sleep(500); 
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(getName() + " is counting: " + i);
+            try {
+                Thread.sleep(500); // Pause for 0.5 seconds
+            } catch (InterruptedException e) {
+                System.out.println(e);
             }
-            System.out.println("✅ Completed: " + fileName);
-        } catch (InterruptedException e) {
-            System.out.println("❌ Interrupted: " + fileName);
         }
     }
 }
 
-class DataProcessor implements Runnable {
-    private String datasetName;
-
-    public DataProcessor(String datasetName) {
-        this.datasetName = datasetName;
-    }
-
-    @Override
-    public void run() {
-        System.out.println("⚙️ Processing: " + datasetName);
-        try {
-            Thread.sleep(1000); 
-            System.out.println("💾 Saved Report: " + datasetName);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-}
-
-public class PracticalMultithreading {
+public class ThreadClassDemo {
     public static void main(String[] args) {
-        System.out.println("=== Starting 4 Concurrent Tasks ===");
-
-        // Task Set 1: File Downloads (Thread Class)
-        FileDownloader d1 = new FileDownloader("Video.mp4");
-        FileDownloader d2 = new FileDownloader("Image.png");
-
-        // Task Set 2: Data Processing (Runnable Interface)
-        Thread t1 = new Thread(new DataProcessor("UserLogs.txt"));
-        Thread t2 = new Thread(new DataProcessor("SalesData.csv"));
-
-        d1.start();
-        d2.start();
+        NumberThread t1 = new NumberThread();
+        NumberThread t2 = new NumberThread();
+        
+        t1.setName("Thread-A");
+        t2.setName("Thread-B");
+        
         t1.start();
         t2.start();
-        
-        System.out.println("=== Main Thread continues... ===");
     }
 }
 ```
+
+### Example B: Runnable Interface (Reusable)
+This defines a task that can be run by multiple threads.
+
+Save as `RunnableInterfaceDemo.java`:
+
+```java
+/**
+ * RunnableInterfaceDemo.java
+ * The most basic example of implementing the Runnable interface.
+ */
+
+class MessageTask implements Runnable {
+    @Override
+    public void run() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(Thread.currentThread().getName() + " says: Hello!");
+            try {
+                Thread.sleep(500); 
+            } catch (InterruptedException e) {
+                System.out.println(e);
+            }
+        }
+    }
+}
+
+public class RunnableInterfaceDemo {
+    public static void main(String[] args) {
+        MessageTask task = new MessageTask();
+        
+        Thread t1 = new Thread(task, "Runner-1");
+        Thread t2 = new Thread(task, "Runner-2");
+        
+        t1.start();
+        t2.start();
+    }
+}
+```
+
 
