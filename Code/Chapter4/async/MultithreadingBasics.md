@@ -6,14 +6,28 @@ This guide covers the fundamental concepts of multithreading in Java, specifical
 
 ## 1. What is Multithreading?
 
-**Multithreading** is the ability of a CPU to execute multiple processes or threads concurrently. 
-*   **Process**: An executing program (e.g., MS Word, Music Player).
-*   **Thread**: A lightweight sub-process, the smallest unit of processing.
+**Multithreading** in Java is a process of executing multiple threads simultaneously.
 
-**Real-world Analogy:**
-Imagine a chef in a kitchen:
-*   **Single-threaded:** The chef cuts vegetables, *then* boils water, *then* cooks pasta. (One task at a time).
-*   **Multithreaded:** The chef puts water to boil (Thread 1), and while it's heating, cuts vegetables (Thread 2). (Tasks happen concurrently).
+To understand this, we first need to understand **Multitasking**. Multitasking is performing multiple tasks at once, and it is achieved in two ways:
+
+1.  **Process-based Multitasking (Multiprocessing)**
+2.  **Thread-based Multitasking (Multithreading)**
+
+### Key Definitions
+
+| Term | Definition | Characteristics |
+| :--- | :--- | :--- |
+| **Process** | A program in execution (e.g., MS Word, Music Player). | **ciHeavyweight.** Has its own separate memory space. Switching between processes is expensive. |
+| **Thread** | A sub-part of a process. The smallest unit of processing. | **Lightweight.** Shares the same memory area as the process. Switching between threads is fast. |
+
+### Multiprocessing vs. Multithreading
+
+*   **Multiprocessing:** Using two or more CPUs (processors) within a single computer system. Why? To increase computing power.
+    *   *Analogy:* Two different people cooking in two different kitchens.
+*   **Multithreading:** Executing multiple threads within a single process. Why? To maximize the utilization of the CPU.
+    *   *Analogy:* One person cooking multiple dishes at the same time (chopping while water boils).
+
+> **Note:** Java provides built-in support for **Multithreading**, not Multiprocessing (which is OS-level).
 
 ---
 
