@@ -118,6 +118,9 @@ public class FileReaderExample {
 
 `BufferedReader` reads text efficiently using buffer memory.
 
+BufferedReader is faster because it reads a large block of data at once instead of one character at a time.
+This reduces the number of disk accesses, which makes file reading much faster.
+
 ### Example
 
 ``` java
