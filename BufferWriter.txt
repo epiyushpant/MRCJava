@@ -1,0 +1,2 @@
+Line 1: This is BufferWriter
+Line 2: Write Data Chunk
