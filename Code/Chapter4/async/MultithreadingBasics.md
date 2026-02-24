@@ -13,22 +13,12 @@ To understand this, we first need to understand **Multitasking**. Multitasking i
 1.  **Process-based Multitasking (Multiprocessing)**
 2.  **Thread-based Multitasking (Multithreading)**
 
-<<<<<<< HEAD
 ### Key Terms Simplified (Beginner Friendly)
 #### ✅ 1. Process (Simple Meaning)
 A **process** is a program that is running.
 *   It is stored in **main memory (RAM)**.
 *   It is an **active program**.
 *   When you restart the computer, the process disappears.
-=======
-### Key Terms Simplified 
-
-| Term | Definition | Characteristics |
-| :--- | :--- | :--- |
-| **Process** | A program in execution (e.g., MS Word, Music Player). | **ciHeavyweight.** Has its own separate memory space. Switching between processes is expensive. |
-| **Thread** | A sub-part of a process. The smallest unit of processing. | **Lightweight.** Shares the same memory area as the process. Switching between threads is fast. |
-
->>>>>>> 12b9a1becc10e95f4ecf13e311e09ef85a35a324
 
 You can run the same program many times → each running copy is a separate process.
 
